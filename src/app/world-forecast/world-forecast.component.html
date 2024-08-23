@@ -1,0 +1,19 @@
+<div class="flex flex-col items-center justify-center my-10 bg-slate-100">
+  <h3 class="font-bold my-10 text-2xl">World Forecast</h3>
+  <div class=" text-lg w-11/12 py-10 bg-white shadow-xl">
+    <div class="flex flex-wrap justify-around justify-center">
+      <div class=" relative flex items-center w-2/5  py-4 my-2 hover:border-b-2" *ngFor="let country of countries">
+        <img class="w-5 h-4 mr-2" [src]="country.flags.png" alt="country.name.common">
+        <span>{{country.name.common}}</span>
+        <fa-icon [icon]="faSquareArrowUpRight" class="absolute right-4 "></fa-icon>
+      </div>
+    </div>
+
+      <div class="flex items-center md:items-center justify-center  pt-10 border-t-2">
+          <button class="hover:scale-110 md:text-3xl" ><fa-icon [icon]="faChevronCircleLeft" (click)="onPreviousClick()" ></fa-icon></button>
+            <p class="mx-5 px-4 py-1 rounded bg-blue-500 text-white font-semibold shadow-md">{{currentPage}}</p>
+           <button class="hover:scale-110 md:text-3xl" ><fa-icon [icon]="faChevronCircleRight" (click)=" onNextClick()"></fa-icon></button>
+      </div>
+  </div>
+
+</div>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CountryService } from '../country.service';
 import { faSquareArrowUpRight, faChevronCircleLeft, faChevronCircleRight, faThLarge} from '@fortawesome/free-solid-svg-icons';
+import { WeatherService } from '../weather.service';
 
 @Component({
   selector: 'app-world-forecast',
@@ -13,11 +14,14 @@ export class WorldForecastComponent implements OnInit {
   faChevronCircleRight = faChevronCircleRight
 
   countries: any[] =[];
+  selectedCountryWeather : any;
   pageSize : number = 10;
   currentPage : number =1
   total:number = 0
 
-  constructor(private countryService : CountryService){}
+  constructor(private countryService : CountryService,
+              private weatherService : WeatherService
+  ){}
 
 
 
@@ -50,6 +54,13 @@ export class WorldForecastComponent implements OnInit {
     if(this.currentPage < 25)
     this.currentPage = this.currentPage + 1
     this.getCountries(this.currentPage, this.pageSize)
+  }
+
+  onClickCountry(contry:string){
+    this.weatherService.getWeatherByCounry(contry).subscribe((weather)=>{
+      this.selectedCountryWeather = weather;
+      console.log(this.selectedCountryWeather)
+    })
   }
 
 }

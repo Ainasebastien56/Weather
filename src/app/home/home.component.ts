@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons';
+import { faArrowAltCircleRight, faWind, faSun } from '@fortawesome/free-solid-svg-icons';
 import { WeatherService } from '../weather.service';
 
 @Component({
@@ -15,12 +15,21 @@ export class HomeComponent implements OnInit {
   constructor(private weatherService : WeatherService ){}
 
   ngOnInit(): void {
-    this.weatherService.getCurrentWeather(this.city).subscribe(
+    this.getCurrentWeather(this.city)
+  }
+
+  getCurrentWeather(city:string){
+    this.weatherService.getCurrentWeather(city).subscribe(
       data=>{
         this.weather = data
         console.log(this.weather);
 
       }
     )
+  }
+
+  onSearch(city: string){
+      this.getCurrentWeather(city)
+
   }
 }

@@ -1,0 +1,20 @@
+<div class="flex flex-col text-justify items-center my-10">
+  <div class=" bg-slate-100 flex w-11/12 flex-col items-center py-10">
+    <div class="flex flex-col items-center pb-5">
+      <h3 class="font-bold text-3xl">Weekly Weather Forecast</h3>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque non nam nisi! Anim
+      </p>
+    </div>
+
+    <div class="flex flex-wrap w-full py-5 justify-around ">
+      <div class=" text-white flex flex-col  mb-5 md:mb-0 items-center bg-gradient-to-r from-blue-500 rounded-lg to-yellow-500 px-5 py-5" *ngFor="let day of weeklyForecast">
+          <h5>{{day.dayOfWeek}}</h5>
+          <img [src]="day.icon" alt="weather icon">
+          <p>{{day.temp}} °C</p>
+      </div>
+    </div>
+
+  </div>
+
+</div>

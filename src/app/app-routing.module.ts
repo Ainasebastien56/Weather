@@ -4,6 +4,7 @@ import { AboutComponent } from './about/about.component';
 import { NewsComponent } from './news/news.component';
 import { MainComponent } from './main/main.component';
 import { AppComponent } from './app.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 const routes: Routes =[
   {path:'', component:AppComponent,
@@ -18,7 +19,8 @@ const routes: Routes =[
         component:MainComponent
       },
       {path:'news', component:NewsComponent},
-      {path:'about', component:AboutComponent}
+      {path:'about', component:AboutComponent},
+      {path:'picture', component:GalleryComponent}
     ]
   }
 ]

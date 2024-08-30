@@ -15,6 +15,8 @@ import { NewsComponent } from './news/news.component';
 import { MainComponent } from './main/main.component';
 import { MapComponent } from './map/map.component';
 import { AboutComponent } from './about/about.component';
+import { WeeklyForecastComponent } from './weekly-forecast/weekly-forecast.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 
 
@@ -28,7 +30,9 @@ import { AboutComponent } from './about/about.component';
     NewsComponent,
     MainComponent,
     MapComponent,
-    AboutComponent
+    AboutComponent,
+    WeeklyForecastComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,

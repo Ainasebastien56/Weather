@@ -22,7 +22,7 @@ export class NewsComponent implements OnInit {
 
     getNews(){
       this.http.get(this.backendUrl).subscribe((data:any)=>{
-        this.news = data.articles
+        this.news = data.articles;
 
       })
     }

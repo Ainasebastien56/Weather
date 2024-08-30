@@ -16,11 +16,11 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.getCurrentWeather(this.city)
-    console.log(localStorage.getItem('page'))
+
   }
 
   getCurrentWeather(city:string){
-    this.weatherService.getCurrentWeather(city).subscribe(
+    this.weatherService.getWeather(city).subscribe(
       data=>{
         this.weather = data
         console.log(this.weather);

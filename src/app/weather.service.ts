@@ -13,8 +13,8 @@ export class WeatherService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getCurrentWeather(city:string):Observable<any>{
-      return this.httpClient.get<any>(`${this.apiUrl}/forecast.json?key=${this.apiKey}&q=${city}&days=4`);
+  getWeather(city:string):Observable<any>{
+      return this.httpClient.get<any>(`${this.apiUrl}/forecast.json?key=${this.apiKey}&q=${city}&days=7`);
   }
 
   getWeatherByCountry(country: string):Observable<any>{

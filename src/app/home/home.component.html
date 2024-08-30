@@ -1,4 +1,4 @@
-<div class=" w-screen h-full flex justify-center md:py-10 md:h-max md:my-5  flex md:justify-center   font-sans  bg-cover bg-[url('assets/tree.jpg')]">
+<div class=" w-screen h-full flex justify-center md:py-10 md:h-max md:my-5 mb-20 flex md:justify-center   font-sans  bg-cover bg-[url('assets/tree.jpg')]">
   <div class="md:w-11/12  px-5 md:px-0 w-full py-20 md:py-10  flex flex-col md:flex-row md:items-center ">
     <div class=" w-full md:w-6/12 items-center md:items-start flex flex-col justify-center md:justify-start   text-white ">
       <h5 class="text-3xl font-mono  font-extrabold tracking-wide mb-2">Climate Change
@@ -21,9 +21,9 @@
     </div>
 
     <div class="md:w-6/12 w-full flex flex-col items-center md:items-end justify-center">
-      <div class="bg-white w-full md:w-3/5 flex-col flex items-center justify-center flex-col rounded-xl shadow-md	">
+      <div class="bg-white w-full md:w-4/5 flex-col flex items-center justify-center flex-col rounded-xl shadow-md	">
 
-        <div class=" w-full grid grid-rows-3 justify-items-center grid-flow-col gap-4 py-5 ">
+        <div class=" w-full grid grid-rows-3 grid-flow-col gap-4 py-5 ">
           <div class="flex  justify-around  w-full items-center border-b-2 pb-1">
             <div class="flex">
               <img class="w-30" [src]="weather?.current.condition.icon" alt="">
@@ -40,23 +40,41 @@
           </div>
 
           <div class="grid grid-cols-2 gap-4 border-b-2 pb-1">
-            <div class="flex flex-col">
+            <div class="flex flex-col items-center">
               <p class="flex"> <span><img src="assets/sunrise.png" class="w-8 mr-1" alt="sunrise"></span>Sunrise</p>
               <p class="text-center"> {{weather?.forecast.forecastday[0].astro.sunrise}}
 
               </p></div>
-            <div class="flex flex-col"><p class="flex"> <span><img src="assets/sunset.png" class="w-8 mr-1" alt="sunset"></span>Sunset</p> <p class="text-center">{{weather?.forecast.forecastday[0].astro.sunset}}</p></div>
-            <div class="flex flex-col"><p class="flex"> <span><img src="assets/humidity.png" class="w-8 mr-1" alt="humidity"></span> Humidity</p> <p class="text-center">{{weather?.current.humidity}}%</p></div>
-            <div class="flex flex-col"><p class="flex"> <span><img src="assets/wind.png" class="w-8 mr-1" alt="wind"></span>WindSpeed</p> <p class="text-center">{{weather?.current.wind_kph}}km/h</p></div>
+            <div class="flex flex-col items-center"><p class="flex"> <span><img src="assets/sunset.png" class="w-8 mr-1" alt="sunset"></span>Sunset</p> <p class="text-center">{{weather?.forecast.forecastday[0].astro.sunset}}</p></div>
+            <div class="flex flex-col items-center"><p class="flex"> <span><img src="assets/humidity.png" class="w-8 mr-1" alt="humidity"></span> Humidity</p> <p class="text-center">{{weather?.current.humidity}}%</p></div>
+            <div class="flex flex-col items-center"><p class="flex"> <span><img src="assets/wind.png" class="w-8 mr-1" alt="wind"></span>WindSpeed</p> <p class="text-center">{{weather?.current.wind_kph}}km/h</p></div>
+          </div>
+        <div class="flex justify-around">
+          <div class="flex justify-center bg-gradient-to-r from-blue-500 rounded-lg to-yellow-500 px-5 ">
+            <div class="flex py-5 items-center text-white flex-col">
+              <p>{{weather?.forecast.forecastday[0].hour[5].time.split(' ')[1]}} AM</p>
+              <p> <img class="w-full" [src]="weather?.forecast.forecastday[0].hour[5].condition.icon" alt=""></p>
+              <p>{{weather?.forecast.forecastday[0].hour[5].temp_c}}°C</p>
+            </div>
           </div>
 
           <div class="flex justify-center bg-gradient-to-r from-blue-500 rounded-lg to-yellow-500 px-5 ">
-              <div class="flex items-center py-5 text-white flex-col">
-                <p>{{weather?.forecast.forecastday[1].date}}</p>
-                <p> <img class="w-full" [src]="weather?.forecast.forecastday[1].day.condition.icon" alt=""></p>
-                <p>{{weather?.forecast.forecastday[1].day.maxtemp_c}}°C</p>
-              </div>
+            <div class="flex items-center py-5 text-white flex-col">
+              <p>{{weather?.forecast.forecastday[0].hour[12].time.split(' ')[1]}} PM</p>
+              <p> <img class="w-full" [src]="weather?.forecast.forecastday[0].hour[12].condition.icon" alt=""></p>
+              <p>{{weather?.forecast.forecastday[0].hour[12].temp_c}}°C</p>
+            </div>
           </div>
+
+          <div class="flex justify-center bg-gradient-to-r from-blue-500 rounded-lg to-yellow-500 px-5 ">
+            <div class="flex items-center py-5 text-white flex-col">
+              <p>{{weather?.forecast.forecastday[0].hour[19].time.split(' ')[1]}} PM</p>
+              <p> <img class="w-full" [src]="weather?.forecast.forecastday[0].hour[19].condition.icon" alt=""></p>
+              <p>{{weather?.forecast.forecastday[0].hour[19].temp_c}}°C</p>
+            </div>
+          </div>
+        </div>
+
 
         </div>
         <div>

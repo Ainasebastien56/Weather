@@ -1,0 +1,25 @@
+<div>
+  <app-navbar></app-navbar>
+</div>
+<div class="flex justify-center py-20">
+  <div class="w-11/12 flex flex-col">
+      <div class="flex flex-col items-center">
+        <h3 class="text-3xl font-bold">Weather Picture</h3>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque, modi, soluta mai
+        </p>
+      </div>
+
+       <div class="flex flex-wrap justify-around py-10 ">
+        <div class="flex flex-col items-center text-justify w-4/12 mb-5 mx-2 px-2 py-10  shadow-xl rounded-lg hover:scale-110" *ngFor="let image of images">
+          <img class="rounded" [src]="image.url" alt="Weather image">
+          <p>{{image.description}}</p>
+        </div>
+       </div>
+  </div>
+
+</div>
+
+<div>
+  <app-footer></app-footer>
+</div>

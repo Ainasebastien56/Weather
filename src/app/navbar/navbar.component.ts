@@ -8,8 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-ngOnInit(): void {
+  active:string = "home"
 
+ngOnInit(): void {
+  this.active = window.location.pathname;
+}
+
+onActive(page: string){
+  localStorage.setItem('page', page);
 }
 
 }

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-
+import { NgxLeafletModule } from 'ngx-leaflet';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +13,8 @@ import { WorldForecastComponent } from './world-forecast/world-forecast.componen
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NewsComponent } from './news/news.component';
 import { MainComponent } from './main/main.component';
+import { MapComponent } from './map/map.component';
+import { AboutComponent } from './about/about.component';
 
 
 
@@ -24,7 +26,9 @@ import { MainComponent } from './main/main.component';
     FooterComponent,
     WorldForecastComponent,
     NewsComponent,
-    MainComponent
+    MainComponent,
+    MapComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +36,7 @@ import { MainComponent } from './main/main.component';
     AppRoutingModule,
     HttpClientModule,
     FontAwesomeModule,
+    NgxLeafletModule
 
   ],
   providers: [],

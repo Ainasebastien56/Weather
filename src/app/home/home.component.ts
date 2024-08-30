@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faArrowAltCircleRight, faWind, faSun } from '@fortawesome/free-solid-svg-icons';
+import { faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons';
 import { WeatherService } from '../weather.service';
 
 @Component({
@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.getCurrentWeather(this.city)
+    console.log(localStorage.getItem('page'))
   }
 
   getCurrentWeather(city:string){

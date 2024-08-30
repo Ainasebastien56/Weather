@@ -21,6 +21,9 @@
     "@fortawesome/angular-fontawesome": "^0.13.0",
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "flowbite": "^2.5.1",
+    "leaflet": "^1.9.4",
+    "ngx-leaflet": "^0.0.16",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"

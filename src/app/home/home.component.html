@@ -1,4 +1,4 @@
-<div class=" w-screen h-full flex justify-center md:py-10 md:h-max md:my-5  flex md:justify-center   font-sans  bg-cover bg-[url('assets/download.jpeg')]">
+<div class=" w-screen h-full flex justify-center md:py-10 md:h-max md:my-5  flex md:justify-center   font-sans  bg-cover bg-[url('assets/tree.jpg')]">
   <div class="md:w-11/12  px-5 md:px-0 w-full py-20 md:py-10  flex flex-col md:flex-row md:items-center ">
     <div class=" w-full md:w-6/12 items-center md:items-start flex flex-col justify-center md:justify-start   text-white ">
       <h5 class="text-3xl font-mono  font-extrabold tracking-wide mb-2">Climate Change
@@ -12,16 +12,16 @@
       </p>
 
       <p class=" text-black mt-2 mb-2 w-full flex flex-col items-center md:flex-row md:justify-center  md:w-11/12">
-        <input type="search" name="search" placeholder=" Search a city..." id="" class=" appearance-none outline-none  w-3/4 py-2 border-2 focus:border-blue-500 rounded "
+        <input type="search" name="search" placeholder=" Search a city..." id="" class=" appearance-none outline-none  w-3/4 py-2 rounded "
             [(ngModel)]="city">
-        <button class="bg-blue-500 rounded-lg mt-5 md:mt-0 md:ml-2  py-2 px-3 shadow-xl hover:scale-110 shadow-md text-white" (click)="onSearch(city)">Search
+        <button class="bg-blue-500  mt-5 md:mt-0   py-2 px-3 shadow-xl hover:scale-110 shadow-md text-white rounded" (click)="onSearch(city)">Search
           <fa-icon [icon]="faArrowAltCircleRight" class="ml-1 "></fa-icon>
         </button>
       </p>
     </div>
 
     <div class="md:w-6/12 w-full flex flex-col items-center md:items-end justify-center">
-      <div class="bg-white w-3/5 flex-col flex items-center justify-center flex-col rounded-xl shadow-md	">
+      <div class="bg-white w-full md:w-3/5 flex-col flex items-center justify-center flex-col rounded-xl shadow-md	">
 
         <div class=" w-full grid grid-rows-3 justify-items-center grid-flow-col gap-4 py-5 ">
           <div class="flex  justify-around  w-full items-center border-b-2 pb-1">
@@ -45,7 +45,7 @@
               <p class="text-center"> {{weather?.forecast.forecastday[0].astro.sunrise}}
 
               </p></div>
-            <div class="flex flex-col"><p class="flex"> <span><img src="assets/assets/sunset.png" class="w-8 mr-1" alt="sunset"></span>Sunset</p> <p class="text-center">{{weather?.forecast.forecastday[0].astro.sunset}}</p></div>
+            <div class="flex flex-col"><p class="flex"> <span><img src="assets/sunset.png" class="w-8 mr-1" alt="sunset"></span>Sunset</p> <p class="text-center">{{weather?.forecast.forecastday[0].astro.sunset}}</p></div>
             <div class="flex flex-col"><p class="flex"> <span><img src="assets/humidity.png" class="w-8 mr-1" alt="humidity"></span> Humidity</p> <p class="text-center">{{weather?.current.humidity}}%</p></div>
             <div class="flex flex-col"><p class="flex"> <span><img src="assets/wind.png" class="w-8 mr-1" alt="wind"></span>WindSpeed</p> <p class="text-center">{{weather?.current.wind_kph}}km/h</p></div>
           </div>

@@ -1,1 +1,78 @@
-<p>about works!</p>
+<div class="mb-20">
+  <app-navbar></app-navbar>
+</div>
+
+<div class="flex flex-col text-justify items-center px-5 md:px-0">
+  <div class="flex w-11/12 flex-col md:flex-row">
+    <img src="assets/sketch.jpg" class=" w-full md:w-2/5" alt="sketch">
+    <div class="">
+      <h3 class=" text-xl md:text-3xl font-semibold border-b-2 pb-2 border-black">About Our Weather Application</h3>
+      <p class="mt-2">
+        Welcome to our Weather Application, your go-to source for accurate and up-to-date Weather
+        information. Whether you're planning your day, preparing for a trip, or simply curious about the
+        weather conditions in different parts of the world, our app has you covered.
+      </p>
+
+      <div class="mt-10">
+        <h4 class="font-bold text-xl pb-5">Key Features:</h4>
+        <div class="pb-5">
+          <h5 class=" font-semibold text-lg"><fa-icon class="mr-2" [icon]="faCloudSun"></fa-icon>Current and Future Weather Forecasts:</h5>
+           <p class="pl-5">
+            Get detailed current conditions and upcoming weather forecast.
+           </p>
+        </div>
+
+        <div class="pb-5">
+          <h5 class=" font-semibold text-lg"><fa-icon class="mr-2" [icon]="faMapLocation"></fa-icon>Interactive Map:</h5>
+           <p class="pl-5">
+            Visualize weather patterns globally and search for specific locations.
+           </p>
+        </div>
+
+        <div class="pb-5">
+          <h5 class=" font-semibold text-lg"><fa-icon class="mr-2" [icon]="faNewspaper"></fa-icon>Weather News:</h5>
+           <p class="pl-5">
+            Stay updated with the latest weather-related news and alerts.
+           </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="w-11/12 flex flex-col md:flex-row md:flex-wrap md:justify-around bg-slate-100 py-10 ">
+    <div class="w-full md:w-2/5 shadow-lg bg-white flex flex-col py-3 px-3 items-center rounded-md hover:scale-110 transition-all duration-300 ease-in-out">
+      <h5 class=" text-lg font-bold pb-3"> <fa-icon [icon]="faCogs" class="mr-2"></fa-icon>Technologies Used</h5>
+      <p class="text-sm"><span class="font-medium">Angular:</span> A powerful framework for building dynamic web applications.</p>
+      <p class="text-sm"><span class="font-medium">Tailwind CSS:</span> A utility-first CSS framework used to create a modern, responsive design.</p>
+      <p class="text-sm"><span class="font-medium">WeatherAPI:</span> Provides real-time and forecast weather data from around the world.</p>
+      <p class="text-sm"><span class="font-medium">NewsAPI:</span> Delivers up-todate news articles related to weather events.</p>
+      </div>
+
+      <div class="w-full md:w-2/5 shadow-lg bg-white flex flex-col py-3 px-3 rounded-md items-center hover:scale-110 transition-all duration-300 ease-in-out mt-10 md:mt-0 lg:mt-0">
+          <h5 class=" text-lg font-bold pb-3"><fa-icon [icon]="faUserCog" class="mr-2"></fa-icon>Developer</h5>
+          <p>This application is developed by <span class="italic font-semibold">Sébastien RANDRIAMANANA</span>. With a passion for coding and a commitment
+            to delivering high-quality software, I have created this app to help users stay informed about weather
+            conditions globally.
+          </p>
+      </div>
+
+      <div class=" w-full md:w-2/5 shadow-lg bg-white flex flex-col py-3 px-3 items-center mt-10 rounded-md hover:scale-110 transition-all duration-300 ease-in-out">
+        <h5 class=" text-lg font-bold pb-3"><fa-icon [icon]="faLink" class="mr-2"></fa-icon>Links and Credits</h5>
+        <p class="text-sm"><span class="font-medium">Github Repository:</span>
+          Explore the source code and contribute to the project on <a class="text-sky-500" href="https://github.com/Ainasebastien56/Weather">GitHub</a>
+        </p>
+        <p class="text-sm"><span class="font-medium">WeatherAPI:</span>
+          Thanks to <a href="https://www.weatherapi.com" class="text-sky-500">WeatherAPI</a> for offering detailed weather information.
+        </p>
+        <p class="text-sm"><span class="font-medium">NewsAPI:</span>
+          Credits to <a href="https://newsapi.org" class="text-sky-500">NewsAPI</a> for the latest weather-related news.
+        </p>
+
+        <p>Thank you for using our Weather Application. Your feedback and contributions are always welcome!</p>
+      </div>
+
+  </div>
+</div>
+<div>
+  <app-footer></app-footer>
+</div>

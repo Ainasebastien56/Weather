@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NewsService } from '../news.service';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-news',
@@ -9,14 +10,21 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 })
 export class NewsComponent implements OnInit {
   faArrowRight = faArrowRight
-    news : any[] =[]
-    constructor(private newService: NewsService){}
+    news : any[] = [];
+
+    private backendUrl = 'https://weather-server-r8a2.onrender.com/news'
+    constructor(private newService: NewsService, private http : HttpClient){}
 
     ngOnInit(): void {
-      this.newService.getNews().subscribe((news)=>{
-          this.news = news.articles
-          console.log(this.news)
+      console.log(localStorage.getItem('page'))
+      this.getNews()
+    }
+
+    getNews(){
+      this.http.get(this.backendUrl).subscribe((data:any)=>{
+        this.news = data.articles
 
       })
     }
+
 }

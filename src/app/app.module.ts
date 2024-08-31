@@ -17,6 +17,7 @@ import { MapComponent } from './map/map.component';
 import { AboutComponent } from './about/about.component';
 import { WeeklyForecastComponent } from './weekly-forecast/weekly-forecast.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 
 
@@ -32,7 +33,8 @@ import { GalleryComponent } from './gallery/gallery.component';
     MapComponent,
     AboutComponent,
     WeeklyForecastComponent,
-    GalleryComponent
+    GalleryComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,

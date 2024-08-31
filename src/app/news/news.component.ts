@@ -10,6 +10,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class NewsComponent implements OnInit {
   faArrowRight = faArrowRight
+    isLoading:boolean = false;
     news : any[] = [];
 
     private backendUrl = 'https://weather-server-r8a2.onrender.com/news'
@@ -21,8 +22,10 @@ export class NewsComponent implements OnInit {
     }
 
     getNews(){
+      this.isLoading = true;
       this.http.get(this.backendUrl).subscribe((data:any)=>{
         this.news = data.articles;
+        this.isLoading = false;
 
       })
     }

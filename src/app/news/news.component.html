@@ -16,8 +16,12 @@
       </div>
   </div>
 
+  <div *ngIf="isLoading" class="flex items-center justify-center min-h-screen ">
+    <app-spinner></app-spinner>
+  </div>
 
-  <div class="md:w-11/12 py-10 flex flex-col items-center  md:flex-row flex-wrap justify-around">
+
+  <div *ngIf="!isLoading" class="md:w-11/12 py-10 flex flex-col items-center  md:flex-row flex-wrap justify-around">
     <div class=" w-4/5 md:w-2/5  my-5" *ngFor=" let new of news">
       <a [href]="new.url" target="_blank" rel="noopener noreferrer">
         <img class="rounded" [src]="new.urlToImage"  alt="news image">

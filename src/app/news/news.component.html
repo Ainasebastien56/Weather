@@ -5,8 +5,9 @@
   <div class="  md:w-11/12 px-5 md:px-0 flex flex-col md:items-center md:flex-row md:justify-between">
     <div class="md:w-1/2 w-full pb-10 md:py-0" >
       <h3 class="font-bold text-3xl">Weather forecast news</h3>
-      <p class="text-justify text-sm border-l-2 pl-2 ">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, cupiditate
-        consectetur adipisci ratione hic ipsam quidem</p>
+      <p class="text-justify text-sm border-l-2 pl-2 border-black mt-5">
+        Comprehensive Weather Coverage: Stay Update with the Latest News, Forecasts, and Climate Trends Around the World.
+      </p>
     </div>
       <div>
         <p class="text-red-600">
@@ -16,8 +17,8 @@
   </div>
 
 
-  <div class="md:w-11/12 py-10 flex flex-wrap justify-around">
-    <div class="w-2/5  my-5" *ngFor=" let new of news">
+  <div class="md:w-11/12 py-10 flex flex-col items-center  md:flex-row flex-wrap justify-around">
+    <div class=" w-4/5 md:w-2/5  my-5" *ngFor=" let new of news">
       <a [href]="new.url" target="_blank" rel="noopener noreferrer">
         <img class="rounded" [src]="new.urlToImage"  alt="news image">
       </a>
@@ -31,9 +32,10 @@
     </div>
 
   </div>
-
-
-
-
 </div>
+<div class=" bottom-0 right-0 left-0">
+  <app-footer></app-footer>
+</div>
+
+
 

@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.sass']
 })
 export class FooterComponent {
-
+  currentYear:number = new Date().getFullYear();
 }

@@ -1,47 +1,50 @@
-<div class="bottom-0 left-0 right-0  flex flex-col md:flex-row   md:justify-around bg-slate-800 py-6 text-white ">
-  <div class=" w-full md:w-1/2 flex flex-col items-center md:items-start md:ml-5">
-    <p class="flex flex font-bold text-xl pb-5">
-      <img src="assets/logo.png" alt="logo" class="w-6 mr-0.5">
-      <span>Weather</span>
-    </p>
-    <p>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-      <br>Vel voluptatum,
-       minima eligendi minus iste facilis! Corporis
-       <br> vitae voluptatum ab delectus,
-       quidem excepturi
-    </p>
-  </div>
-
-  <div class=" w-full md:w-1/2 mt-5 md:mt-0 flex justify-around items-center ">
-    <div class="flex flex-col">
-      <h5 class="border-l-2 pl-2 font-semibold ">Links</h5>
-      <ul class="flex flex flex-col justify-end  justify-around text-neutral-500 ">
-        <li class="hover:text-white "><a href="/about" >About</a></li>
-        <li class="hover:text-white  "><a href="/climat" >Climate change</a></li>
-        <li  class="hover:text-white "><a href="/news">News</a></li>
-        <li class="hover:text-white"><a href="/picture" >Picture</a></li>
-      </ul>
+<div class="mb-0  bottom-0 left-0 right-0  md:justify-around bg-slate-800 py-6 text-white ">
+  <div class="flex flex-col md:flex-row">
+    <div class=" w-full md:w-1/2 flex flex-col items-center md:items-start md:ml-5 px-5 md:px-0">
+      <p class="flex flex font-bold text-xl pb-5">
+        <img src="assets/logo.png" alt="logo" class="w-6 mr-0.5">
+        <span>Weather</span>
+      </p>
+      <p class="text-justify">
+        Providing you with the latest weather
+        updates <br> and forecasts  to keep you informed,
+        no matter where you are.
+      </p>
     </div>
 
-    <div class="flex flex-col font-semibold">
-      <h5 class="border-l-2 pl-2">Social Media</h5>
-      <div>
-        <span class="font-normal">Follow us on Social Media</span>
-        <p class="flex items-center flex justify-center pt-5">
-          <a class="hover:scale-110" href="https://facebook.com">
-            <img src="assets/facebook.svg" alt="facebook" class="w-7 h-7">
-          </a>
-          <a  class="hover:scale-110 px-2" href="hhtps://facebook.com">
-            <img src="assets/twitter.svg" alt="facebook" class="w-6 h-6">
-          </a>
-          <a  class="hover:scale-110" href="https://instagram.com">
-            <img src="assets/instagram.svg" alt="instagram" class="w-6 h-6">
-          </a>
-        </p>
+    <div class=" w-full md:w-1/2 mt-5 md:mt-0 flex justify-around items-center ">
+      <div class="flex flex-col">
+        <h5 class="border-l-2 pl-2 font-semibold ">Links</h5>
+        <ul class="flex flex flex-col justify-end  justify-around text-neutral-500 ">
+          <li class="hover:text-white "><a routerLink="/about" >About</a></li>
+          <li class="hover:text-white  "><a routerLink="/climate" >Climate change</a></li>
+          <li  class="hover:text-white "><a routerLink="/news">News</a></li>
+          <li class="hover:text-white"><a routerLink="/picture" >Picture</a></li>
+        </ul>
       </div>
-    </div>
 
+      <div class="flex flex-col font-semibold">
+        <h5 class="border-l-2 pl-2">Social Media</h5>
+        <div>
+          <span class="font-normal">Follow us on Social Media</span>
+          <p class="flex items-center flex justify-center pt-5">
+            <a class="hover:scale-110" href="https://facebook.com">
+              <img src="assets/facebook.svg" alt="facebook" class="w-7 h-7">
+            </a>
+            <a  class="hover:scale-110 px-2" href="hhtps://facebook.com">
+              <img src="assets/twitter.svg" alt="facebook" class="w-6 h-6">
+            </a>
+            <a  class="hover:scale-110" href="https://instagram.com">
+              <img src="assets/instagram.svg" alt="instagram" class="w-6 h-6">
+            </a>
+          </p>
+        </div>
+      </div>
+  </div>
+</div>
+
+  <div class="flex justify-center text-center text-slate-400 pt-10 px-5 md:px-0">
+    <p>Copyright ©; {{currentYear}} RANDRIAMANANA Aina Sébastien. All rights reserved.</p>
   </div>
 
 </div>

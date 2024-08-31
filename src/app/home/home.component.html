@@ -1,20 +1,18 @@
-<div class=" w-screen h-full flex justify-center md:py-10 md:h-max md:my-5 mb-20 flex md:justify-center   font-sans  bg-cover bg-[url('assets/tree.jpg')]">
+<div class=" w-screen h-full flex justify-center md:py-10 md:h-max  flex md:justify-center   font-sans  bg-cover bg-[url('assets/tree.jpg')]">
   <div class="md:w-11/12  px-5 md:px-0 w-full py-20 md:py-10  flex flex-col md:flex-row md:items-center ">
     <div class=" w-full md:w-6/12 items-center md:items-start flex flex-col justify-center md:justify-start   text-white ">
-      <h5 class="text-3xl font-mono  font-extrabold tracking-wide mb-2">Climate Change
-         <br> Weather Forecast
+      <h5 class="text-3xl font-mono  font-extrabold tracking-wide mb-2">
+         Weather Forecast
       </h5>
 
-      <p class="mb-2 text-xs  border-l-2 pl-2 text-justify md:text-justify">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-         Praesentium <br> facere odit quos necessitatibus aliquam veritatis?
-         Officia architecto est dolor veniam officiis
+      <p class="mb-2 text-sm md:text-md  font-semibold border-l-2 pl-2 text-justify md:text-justify">
+       Weather forecasts for thousands of locations around the world
       </p>
 
-      <p class=" text-black mt-2 mb-2 w-full flex flex-col items-center md:flex-row md:justify-center  md:w-11/12">
-        <input type="search" name="search" placeholder=" Search a city..." id="" class=" appearance-none outline-none  w-3/4 py-2 rounded "
+      <p class=" text-black  mt-2 mb-2 w-full flex flex-row justify-center md:justify-start mb-5 md:mb-0  md:w-11/12">
+        <input type="search"  name="search" placeholder=" Search a city..." id="" class=" appearance-none outline-none w-3/5 md:w-3/4 py-2 rounded "
             [(ngModel)]="city">
-        <button class="bg-blue-500  mt-5 md:mt-0   py-2 px-3 shadow-xl hover:scale-110 shadow-md text-white rounded" (click)="onSearch(city)">Search
+        <button class="bg-blue-500  py-2 px-3 shadow-xl hover:scale-110 shadow-md text-white rounded" (click)="onSearch(city)">Search
           <fa-icon [icon]="faArrowAltCircleRight" class="ml-1 "></fa-icon>
         </button>
       </p>
@@ -34,7 +32,7 @@
             </div>
 
             <div class="text-3xl font-bold mb-5">
-              <span class="text-md">{{weather?.current.temp_c}}</span> <span class="text-xl">°C</span>
+              <span class="text-md">{{weather?.current.temp_c}}</span> <span class="text-3xl"> °C</span>
             </div>
 
           </div>
@@ -54,7 +52,7 @@
             <div class="flex py-5 items-center text-white flex-col">
               <p>{{weather?.forecast.forecastday[0].hour[5].time.split(' ')[1]}} AM</p>
               <p> <img class="w-full" [src]="weather?.forecast.forecastday[0].hour[5].condition.icon" alt=""></p>
-              <p>{{weather?.forecast.forecastday[0].hour[5].temp_c}}°C</p>
+              <p>{{weather?.forecast.forecastday[0].hour[5].temp_c}} °C</p>
             </div>
           </div>
 
@@ -62,7 +60,7 @@
             <div class="flex items-center py-5 text-white flex-col">
               <p>{{weather?.forecast.forecastday[0].hour[12].time.split(' ')[1]}} PM</p>
               <p> <img class="w-full" [src]="weather?.forecast.forecastday[0].hour[12].condition.icon" alt=""></p>
-              <p>{{weather?.forecast.forecastday[0].hour[12].temp_c}}°C</p>
+              <p>{{weather?.forecast.forecastday[0].hour[12].temp_c}} °C</p>
             </div>
           </div>
 
@@ -70,7 +68,7 @@
             <div class="flex items-center py-5 text-white flex-col">
               <p>{{weather?.forecast.forecastday[0].hour[19].time.split(' ')[1]}} PM</p>
               <p> <img class="w-full" [src]="weather?.forecast.forecastday[0].hour[19].condition.icon" alt=""></p>
-              <p>{{weather?.forecast.forecastday[0].hour[19].temp_c}}°C</p>
+              <p>{{weather?.forecast.forecastday[0].hour[19].temp_c}} °C</p>
             </div>
           </div>
         </div>

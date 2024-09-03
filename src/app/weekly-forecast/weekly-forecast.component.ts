@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges} from '@angular/core';
 import { WeatherService } from '../weather.service';
 
 @Component({
@@ -6,15 +6,14 @@ import { WeatherService } from '../weather.service';
   templateUrl: './weekly-forecast.component.html',
   styleUrls: ['./weekly-forecast.component.sass']
 })
-export class WeeklyForecastComponent implements OnInit {
+export class WeeklyForecastComponent implements OnChanges {
   weeklyForecast : any[] = [];
-  city : string ='Antananarivo'
+  @Input() city! : string;
+
   constructor(private weatherService : WeatherService ){}
 
-  ngOnInit(): void {
+  ngOnChanges(city: SimpleChanges): void {
     this.getWeeklyForecast()
-
-
   }
 
   getWeeklyForecast(){

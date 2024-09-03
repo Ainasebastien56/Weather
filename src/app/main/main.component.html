@@ -1,7 +1,7 @@
 <div class="md:overflow-x-hidden mb-0 pb-0">
   <app-navbar></app-navbar>
-  <app-home></app-home>
-  <app-weekly-forecast></app-weekly-forecast>
+  <app-home (location)="onLocation($event)"></app-home>
+  <app-weekly-forecast [city]="location"></app-weekly-forecast>
   <app-map></app-map>
   <app-footer></app-footer>
 </div>

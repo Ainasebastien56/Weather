@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -8,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  active:string = "home"
+  faBars = faBars;
+  active:string = "home";
+  isMenuOpen:boolean = false;
 
 ngOnInit(): void {
   this.active = window.location.pathname;
@@ -16,6 +19,10 @@ ngOnInit(): void {
 
 onActive(page: string){
   localStorage.setItem('page', page);
+}
+
+toogleMenu(){
+  this.isMenuOpen = !this.isMenuOpen;
 }
 
 }

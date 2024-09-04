@@ -72,11 +72,6 @@ closeModal(){
 }
 
   onClickCountry(contry:string){
-    this.weatherService.getWeatherByCountry(contry).subscribe((weather)=>{
-      this.selectedCountryWeather = weather;
-      this.openModal()
-      console.log(this.selectedCountryWeather)
-    })
     this.openModal()
   }
 

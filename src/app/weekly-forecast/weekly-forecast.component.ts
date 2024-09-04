@@ -18,6 +18,7 @@ export class WeeklyForecastComponent implements OnChanges {
 
   getWeeklyForecast(){
       this.weatherService.getWeather(this.city).subscribe((data:any)=>{
+        console.log(data)
         this.weeklyForecast = data.forecast.forecastday.map((day:any)=>{
           return{
             date: new Date(day.date),

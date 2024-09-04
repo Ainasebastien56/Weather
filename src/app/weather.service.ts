@@ -1,27 +1,29 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class WeatherService {
-  private apiKey = '984a86c262154b129a9181358242108';
-  private apiKey2= 'd6a3c0062595cef597a06bfd243c62a7';
-  private apiUrl = 'https://api.weatherapi.com/v1';
-  private apiUrl2 = 'https://api.openweathermap.org/data/2.5/weather';
+
+  backendUrl = 'https://weather-server-r8a2.onrender.com';
+
 
   constructor(private httpClient: HttpClient) { }
 
   getWeather(city:string):Observable<any>{
-      return this.httpClient.get<any>(`${this.apiUrl}/forecast.json?key=${this.apiKey}&q=${city}&days=7`);
-  }
-
-  getWeatherByCountry(country: string):Observable<any>{
-    return this.httpClient.get<any>(`${this.apiUrl}/forecast.json?key=${this.apiKey}&q=${country}`);
+      let params = new HttpParams()
+      .set('city', city)
+      .set('days',7)
+      return this.httpClient.get<any>(`${this.backendUrl}/weather`, {params})
   }
 
   getWeatherByCoordinates(lat: number, lon:number):Observable<any>{
-    return this.httpClient.get(`${this.apiUrl2}?lat=${lat}&lon=${lon}&appid=${this.apiKey2}&units=metric`);
+    let params = new HttpParams()
+        .set('lat', lat)
+        .set('lon',lon);
+
+    return this.httpClient.get(`${this.backendUrl}/weather_map`,{params});
   }
 }

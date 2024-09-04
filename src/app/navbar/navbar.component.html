@@ -1,32 +1,37 @@
-<nav class=" bg-white lg:bg-slate-100">
-  <div class="container px-2 lg:px-10 mx-auto flex flex-col lg:flex-row justify-between items-start lg:items-center lg:py-5">
-    <div class="text-lg font-bold w-full lg:w-auto py-5 lg:py-0">
+<nav class=" bg-slate-100">
+  <div class="container px-2 lg:px-10 mx-auto flex  justify-between items-start lg:items-center py-5">
+    <div class="text-lg font-bold">
         <a href="#" class="flex justify-center">
           <img src="assets/logo.png" alt="logo" class="w-6 mr-0.5">
           <span>Weather</span>
         </a>
     </div>
-    <div class="lg:hidden ">
+
+    <div class="flex flex-col items-center justify-center px-3">
+      <div class="lg:hidden ">
         <button (click)="toogleMenu()" class="tex-white focus:outline-none">
           <fa-icon [icon]="faBars" size="2x"></fa-icon>
         </button>
     </div>
-    <div [ngClass]="{'block': isMenuOpen, 'hidden':!isMenuOpen}" class="w-full lg:flex lg:items-center lg:w-auto">
-        <ul class="lg:flex lg:space-x-10 lg:text-neutral-500">
-            <li class="lg:hover:text-black hover:bg-slate-200 transition-all duration-300 ease-in-out lg:hover:bg-transparent">
-                <a routerLink="/" class="block py-2 lg:inline-block lg:hover:scale-110 transition-all duration-200 ease-in-out ">Home</a>
-            </li>
-            <li class="lg:hover:text-black hover:bg-slate-200 transition-all duration-300 ease-in-out lg:hover:bg-transparent">
-              <a routerLink="/about" class="block py-2 lg:inline-block lg:hover:scale-110 transition-all duration-200 ease-in-out">About</a>
+    <div [ngClass]="{'block': isMenuOpen, 'hidden':!isMenuOpen}" class="lg:flex lg:items-center w-full lg:w-auto">
+      <ul class="lg:flex lg:space-x-10 text-neutral-500">
+          <li class="hover:text-black hover:pr-2 transition-all duration-100 ease-in-out lg:hover:pr-0 hover:border-r-2 border-black lg:hover:border-none">
+              <a routerLink="/" class="block py-2 lg:inline-block lg:hover:scale-110 transition-all duration-200 ease-in-out ">Home</a>
           </li>
-          <li class="lg:hover:text-black hover:bg-slate-200 transition-all duration-300 ease-in-out lg:hover:bg-transparent">
-            <a routerLink="/news" class="block py-2 lg:inline-block lg:hover:scale-110 transition-all duration-200 ease-in-out">News</a>
+          <li class="hover:text-black hover:pr-2 transition-all duration-100 ease-in-out lg:hover:pr-0 hover:border-r-2 border-black lg:hover:border-none">
+            <a routerLink="/about" class="block py-2 lg:inline-block lg:hover:scale-110 transition-all duration-200 ease-in-out">About</a>
         </li>
-        <li class="lg:hover:text-black hover:bg-slate-200 transition-all duration-300 ease-in-out lg:hover:bg-transparent">
-          <a routerLink="/picture" class="block py-2 lg:inline-block lg:hover:scale-110 transition-all duration-200 ease-in-out">Picture</a>
+        <li class="hover:text-black hover:pr-2 transition-all duration-100 ease-in-out lg:hover:pr-0 hover:border-r-2 border-black lg:hover:border-none">
+          <a routerLink="/news" class="block py-2 lg:inline-block lg:hover:scale-110 transition-all duration-200 ease-in-out">News</a>
       </li>
-        </ul>
+      <li class="hover:text-black  hover:pr-2 transition-all duration-100 ease-in-out lg:hover:pr-0 hover:border-r-2 border-black lg:hover:border-none">
+        <a routerLink="/picture" class="block py-2 lg:inline-block lg:hover:scale-110 transition-all duration-200 ease-in-out">Picture</a>
+    </li>
+      </ul>
+  </div>
     </div>
+
+
   </div>
 </nav>
 

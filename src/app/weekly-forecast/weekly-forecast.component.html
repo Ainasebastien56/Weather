@@ -1,14 +1,17 @@
-<div class="w-screen h-full flex flex-col items-center justify-center mt-20 py-10 bg-sky-100">
+<div class="w-screen h-full flex flex-col items-center justify-center mt-20">
   <div class=" flex w-11/12 flex-col items-center">
     <div class="flex flex-col items-center pb-5">
-      <h3 class="font-bold text-xl md:text-3xl">Weekly Weather Forecast</h3>
-      <p class="mt-3 text-justify">
-        Plan Your Week Ahead: Detailed Weather Forecats for Every Day
+      <h3 class="font-bold text-xl md:text-3xl">Three days Weather Forecast</h3>
+      <p class="mt-3 text-lg  text-justify">
+        Your Next 3 Days at a Glance
+      </p>
+      <p class="text-md">
+        Location: <span class=" text-lg font-semibold">{{city}}</span>
       </p>
     </div>
 
-    <div class="flex flex-wrap w-full justify-around ">
-      <div class=" text-white flex flex-col  mb-5 md:mb-0 items-center bg-gradient-to-r from-blue-500 rounded-lg to-yellow-500 px-5 py-5" *ngFor="let day of weeklyForecast">
+    <div class="flex flex-wrap w-full justify-around">
+      <div class=" text-white flex flex-col  mb-5 md:mb-0 items-center bg-gradient-to-r from-blue-500 rounded-lg to-yellow-500 px-10 py-5" *ngFor="let day of weeklyForecast">
           <h5>{{day.dayOfWeek}}</h5>
           <img [src]="day.icon" alt="weather icon">
           <p>{{day.temp}} °C</p>

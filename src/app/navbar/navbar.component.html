@@ -1,6 +1,6 @@
 <nav class=" bg-slate-100">
-  <div class="container px-2 lg:px-10 mx-auto flex  justify-between items-start lg:items-center py-5">
-    <div class="text-lg font-bold">
+  <div class="container px-2  mx-auto flex  justify-between items-start md:items-center py-5">
+    <div class="text-md font-bold">
         <a href="#" class="flex justify-center">
           <img src="assets/logo.png" alt="logo" class="w-6 mr-0.5">
           <span>Weather</span>
@@ -8,24 +8,24 @@
     </div>
 
     <div class="flex flex-col items-center justify-center px-3">
-      <div class="lg:hidden ">
-        <button (click)="toogleMenu()" class="tex-white focus:outline-none">
+      <div class="md:hidden ">
+        <button (click)="toogleMenu()" class="focus:outline-none">
           <fa-icon [icon]="faBars" size="2x"></fa-icon>
         </button>
     </div>
-    <div [ngClass]="{'block': isMenuOpen, 'hidden':!isMenuOpen}" class="lg:flex lg:items-center w-full lg:w-auto">
-      <ul class="lg:flex lg:space-x-10 text-neutral-500">
-          <li class="hover:text-black hover:pr-2 transition-all duration-100 ease-in-out lg:hover:pr-0 hover:border-r-2 border-black lg:hover:border-none">
-              <a routerLink="/" class="block py-2 lg:inline-block lg:hover:scale-110 transition-all duration-200 ease-in-out ">Home</a>
+    <div [ngClass]="{'block': isMenuOpen, 'hidden':!isMenuOpen}" class="md:flex md:items-center w-full md:w-auto">
+      <ul class="md:flex md:space-x-10 text-neutral-500">
+          <li class="hover:text-black hover:pr-2 transition-all duration-100 ease-in-out md:hover:pr-0 hover:border-r-2 border-black md:hover:border-none">
+              <a routerLink="/" class="block py-2 md:inline-block md:hover:scale-110 transition-all duration-200 ease-in-out ">Home</a>
           </li>
-          <li class="hover:text-black hover:pr-2 transition-all duration-100 ease-in-out lg:hover:pr-0 hover:border-r-2 border-black lg:hover:border-none">
-            <a routerLink="/about" class="block py-2 lg:inline-block lg:hover:scale-110 transition-all duration-200 ease-in-out">About</a>
+          <li class="hover:text-black hover:pr-2 transition-all duration-100 ease-in-out md:hover:pr-0 hover:border-r-2 border-black md:hover:border-none">
+            <a routerLink="/about" class="block py-2 md:inline-block md:hover:scale-110 transition-all duration-200 ease-in-out">About</a>
         </li>
-        <li class="hover:text-black hover:pr-2 transition-all duration-100 ease-in-out lg:hover:pr-0 hover:border-r-2 border-black lg:hover:border-none">
-          <a routerLink="/news" class="block py-2 lg:inline-block lg:hover:scale-110 transition-all duration-200 ease-in-out">News</a>
+        <li class="hover:text-black hover:pr-2 transition-all duration-100 ease-in-out md:hover:pr-0 hover:border-r-2 border-black md:hover:border-none">
+          <a routerLink="/news" class="block py-2 md:inline-block md:hover:scale-110 transition-all duration-200 ease-in-out">News</a>
       </li>
-      <li class="hover:text-black  hover:pr-2 transition-all duration-100 ease-in-out lg:hover:pr-0 hover:border-r-2 border-black lg:hover:border-none">
-        <a routerLink="/picture" class="block py-2 lg:inline-block lg:hover:scale-110 transition-all duration-200 ease-in-out">Picture</a>
+      <li class="hover:text-black  hover:pr-2 transition-all duration-100 ease-in-out md:hover:pr-0 hover:border-r-2 border-black md:hover:border-none">
+        <a routerLink="/picture" class="block py-2 md:inline-block md:hover:scale-110 transition-all duration-200 ease-in-out">Picture</a>
     </li>
       </ul>
   </div>
